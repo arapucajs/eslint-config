@@ -2,6 +2,7 @@
  * @arapucajs/eslint-config
  *
  * (c) Arapuca
+
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,12 +11,15 @@
 import tseslint from 'typescript-eslint'
 import unicorn from 'eslint-plugin-unicorn'
 import stylistic from '@stylistic/eslint-plugin'
+
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 /**
  * Default list of files to include
  */
+
 export const INCLUDE_LIST = ['**/*.ts', '**/*.js']
+
 
 /**
  * List of files that must be ignored globally
@@ -43,6 +47,7 @@ export const GLOBAL_IGNORE_LIST = [
  * Default set of files to ignore for applications
  */
 export const APP_IGNORE_LIST = ['public/assets/**', '__snapshots__/**', 'resources/**']
+
 
 /**
  * Default set of plugins to apply to the config
@@ -131,7 +136,10 @@ export const RULES_LIST = {
 
 /**
  * Configures ESLint to use an opinionated config tailored for
+
  * creating a TypeScript/JavaScript library or package.
+
+
  *
  * You may pass additional config blocks as multiple
  * arguments to this function.
@@ -145,6 +153,8 @@ export const RULES_LIST = {
  *   ignores: ['custom-ignore/**'],
  *   rules: {
  *     'custom-rule': 'error'
+
+
  *   }
  * })
  * ```
@@ -155,8 +165,10 @@ export function configPkg(...configBlocksToMerge) {
     tseslint.configs.base,
     { name: 'Plugins list', plugins: PLUGINS_LIST },
     {
+
       name: 'Arapuca pkg defaults',
       files: INCLUDE_LIST,
+
       rules: RULES_LIST,
     },
     ...configBlocksToMerge
@@ -165,7 +177,10 @@ export function configPkg(...configBlocksToMerge) {
 
 /**
  * Configures ESLint to use an opinionated config tailored for
+
  * an application (with additional ignore patterns for web assets)
+
+
  *
  * You may pass additional config blocks as multiple
  * arguments to this function.
@@ -179,6 +194,7 @@ export function configPkg(...configBlocksToMerge) {
  *   ignores: ['custom-ignore/**'],
  *   rules: {
  *     'custom-rule': 'error'
+
  *   }
  * })
  * ```
@@ -193,6 +209,7 @@ export function configApp(...configBlocksToMerge) {
       files: INCLUDE_LIST,
       ignores: APP_IGNORE_LIST,
       rules: RULES_LIST,
+
     },
     ...configBlocksToMerge
   )
