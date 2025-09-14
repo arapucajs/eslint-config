@@ -1,7 +1,8 @@
 /*
- * @adonisjs/eslint-config
+ * @arapucajs/eslint-config
  *
- * (c) AdonisJS
+ * (c) Arapuca
+
  *
  * For the full copyright and license information, please view the LICENSE
  * file that was distributed with this source code.
@@ -10,13 +11,15 @@
 import tseslint from 'typescript-eslint'
 import unicorn from 'eslint-plugin-unicorn'
 import stylistic from '@stylistic/eslint-plugin'
-import adonisJSPlugin from '@adonisjs/eslint-plugin'
+
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
 /**
  * Default list of files to include
  */
-export const INCLUDE_LIST = ['**/*.ts']
+
+export const INCLUDE_LIST = ['**/*.ts', '**/*.js']
+
 
 /**
  * List of files that must be ignored globally
@@ -35,15 +38,16 @@ export const GLOBAL_IGNORE_LIST = [
   'build/**',
   '.yalc/**',
   'pnpm-lock.yaml',
-  'bun.lock',
   'yarn.lock',
   'package-lock.json',
+  'node_modules/**',
 ]
 
 /**
- * Default set of files to ignore
+ * Default set of files to ignore for applications
  */
-export const ADONIS_IGNORE_LIST = ['public/assets/**', '__snapshots__/**', 'resources/**']
+export const APP_IGNORE_LIST = ['public/assets/**', '__snapshots__/**', 'resources/**']
+
 
 /**
  * Default set of plugins to apply to the config
@@ -132,7 +136,10 @@ export const RULES_LIST = {
 
 /**
  * Configures ESLint to use an opinionated config tailored for
- * creating a TypeScript library.
+
+ * creating a TypeScript/JavaScript library or package.
+
+
  *
  * You may pass additional config blocks as multiple
  * arguments to this function.
@@ -143,8 +150,11 @@ export const RULES_LIST = {
  *
  * configPkg({
  *   files: INCLUDE_LIST,
- *   ignore: IGNORE_LIST,
+ *   ignores: ['custom-ignore/**'],
  *   rules: {
+ *     'custom-rule': 'error'
+
+
  *   }
  * })
  * ```
@@ -155,9 +165,10 @@ export function configPkg(...configBlocksToMerge) {
     tseslint.configs.base,
     { name: 'Plugins list', plugins: PLUGINS_LIST },
     {
-      name: 'AdonisJS pkg defaults',
+
+      name: 'Arapuca pkg defaults',
       files: INCLUDE_LIST,
-      ignores: ADONIS_IGNORE_LIST,
+
       rules: RULES_LIST,
     },
     ...configBlocksToMerge
@@ -166,7 +177,10 @@ export function configPkg(...configBlocksToMerge) {
 
 /**
  * Configures ESLint to use an opinionated config tailored for
- * an AdonisJS application
+
+ * an application (with additional ignore patterns for web assets)
+
+
  *
  * You may pass additional config blocks as multiple
  * arguments to this function.
@@ -177,8 +191,10 @@ export function configPkg(...configBlocksToMerge) {
  *
  * configApp({
  *   files: INCLUDE_LIST,
- *   ignore: IGNORE_LIST,
+ *   ignores: ['custom-ignore/**'],
  *   rules: {
+ *     'custom-rule': 'error'
+
  *   }
  * })
  * ```
@@ -187,16 +203,13 @@ export function configApp(...configBlocksToMerge) {
   return tseslint.config(
     { ignores: GLOBAL_IGNORE_LIST },
     tseslint.configs.base,
-    { name: 'Plugins list', plugins: { ...PLUGINS_LIST, '@adonisjs': adonisJSPlugin } },
+    { name: 'Plugins list', plugins: PLUGINS_LIST },
     {
-      name: 'AdonisJS app defaults',
+      name: 'Arapuca app defaults',
       files: INCLUDE_LIST,
-      ignores: ADONIS_IGNORE_LIST,
-      rules: {
-        ...RULES_LIST,
-        '@adonisjs/prefer-lazy-controller-import': ['error'],
-        '@adonisjs/prefer-lazy-listener-import': ['error'],
-      },
+      ignores: APP_IGNORE_LIST,
+      rules: RULES_LIST,
+
     },
     ...configBlocksToMerge
   )
