@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.1.0](https://github.com/arapucajs/eslint-config/compare/v1.0.4...v1.1.0) (2025-09-21)
+
+
+### Features
+
+* **chacks:** configurando um chacks para rodar no build ([2b1861f](https://github.com/arapucajs/eslint-config/commit/2b1861f5f5a1e57a4309377fd1bdb8df037da5d0))
+
+
+### Bug Fixes
+
+* **actions:** criando script build para nao dar erro no deploy ([75be3fc](https://github.com/arapucajs/eslint-config/commit/75be3fc8141f6be7388ed22ddb2126ea69b30813))
+
 ## [1.0.4](https://github.com/arapucajs/eslint-config/compare/v1.0.3...v1.0.4) (2025-09-21)
 
 
