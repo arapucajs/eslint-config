@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.4](https://github.com/arapucajs/eslint-config/compare/v1.0.3...v1.0.4) (2025-09-21)
+
+
+### Bug Fixes
+
+* **actions:** aterancao do action para rodar deploys separados do release ([08dfc15](https://github.com/arapucajs/eslint-config/commit/08dfc15877911cdf8b8d2842c236e10bd0b327da))
+* **lint:** colocanto lint para check ([6d68a96](https://github.com/arapucajs/eslint-config/commit/6d68a962444bae0221ffd0b1953048bbda2062ce))
+
 ## [1.0.3](https://github.com/arapucajs/eslint-config/compare/v1.0.2...v1.0.3) (2025-09-21)
 
 
