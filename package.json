@@ -40,13 +40,13 @@
     "eslint-plugin-unicorn": "^60.0.0",
     "typescript-eslint": "^8.39.0"
   },
-  "homepage": "https://github.com/adonisjs/eslint-config#readme",
+  "homepage": "https://github.com/arapucajs/eslint-config#readme",
   "bugs": {
-    "url": "https://github.com/adonisjs/eslint-config/issues"
+    "url": "https://github.com/arapucajs/eslint-config/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/adonisjs/eslint-config.git"
+    "url": "git+https://github.com/arapucajs/eslint-config.git"
   },
   "keywords": [
     "eslint-config",
