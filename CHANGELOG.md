@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.2](https://github.com/arapucajs/eslint-config/compare/v1.0.1...v1.0.2) (2025-09-21)
+
+
+### Bug Fixes
+
+* **ci:** ajustando bug de npm ci para github actions ([66898a1](https://github.com/arapucajs/eslint-config/commit/66898a1181ac2dc893d2b8b80f54ebb5afa5c179))
+
 ## [1.0.1](https://github.com/arapucajs/eslint-config/compare/v1.0.0...v1.0.1) (2025-09-21)
 
 
