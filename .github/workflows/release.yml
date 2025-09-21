@@ -18,6 +18,7 @@ jobs:
         with:
           release-type: node
           token: ${{ secrets.GITHUB_TOKEN }}
+          draft: false # Garante que o release não será draft
       - name: Install dependencies
         run: npm ci
       - name: Build Release Artifact
