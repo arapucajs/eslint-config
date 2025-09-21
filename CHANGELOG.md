@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/arapucajs/eslint-config/compare/v1.0.2...v1.0.3) (2025-09-21)
+
+
+### Bug Fixes
+
+* **bug typecheck:** corrigindo erro de typecheck para o projeto ([c1b67b2](https://github.com/arapucajs/eslint-config/commit/c1b67b2fc1da725403a4333aaae07efd8e2ed7de))
+
 ## [1.0.2](https://github.com/arapucajs/eslint-config/compare/v1.0.1...v1.0.2) (2025-09-21)
 
 
