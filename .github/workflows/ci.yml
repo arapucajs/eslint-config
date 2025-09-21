@@ -12,6 +12,19 @@ permissions:
   contents: read
 
 jobs:
+
+  typecheck:
+    uses: arapucajs/.github/.github/workflows/typecheck.yml@main
+
+  lint:
+    needs: typecheck
+    uses: arapucajs/.github/.github/workflows/lint.yml@main
+
+  test:
+    needs: lint
+    uses: arapucajs/.github/.github/workflows/test.yml@main
+
+
   commitlint:
     runs-on: ubuntu-latest
     steps:
@@ -24,7 +37,7 @@ jobs:
           node-version: lts/*
           cache: npm
       - name: Install commitlint
-        run: npm ci
+        run: npm install -D @commitlint/cli @commitlint/config-conventional
       - name: Print versions
         run: |
           git --version
