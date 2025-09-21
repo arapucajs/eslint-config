@@ -13,7 +13,8 @@
     "commitlint": "commitlint --edit",
     "commit": "cz",
     "test": "echo \"Error: no test specified\" && exit 0",
-    "typecheck": "echo \"Error: no test specified\" && exit 0"
+    "typecheck": "echo \"Error: no test specified\" && exit 0",
+    "lint": "echo \"Error: no test specified\" && exit 0"
   },
   "devDependencies": {
     "@adonisjs/prettier-config": "^1.4.5",
