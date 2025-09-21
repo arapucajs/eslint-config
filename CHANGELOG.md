@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/arapucajs/eslint-config/compare/v1.1.0...v1.1.1) (2025-09-21)
+
+
+### Bug Fixes
+
+* **action:** alterando actions para aceitar ci ([1e50603](https://github.com/arapucajs/eslint-config/commit/1e5060319b1c1735a00a833376da3c894ae11165))
+
 ## [1.1.0](https://github.com/arapucajs/eslint-config/compare/v1.0.4...v1.1.0) (2025-09-21)
 
 
