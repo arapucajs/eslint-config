@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.1](https://github.com/arapucajs/eslint-config/compare/v1.0.0...v1.0.1) (2025-09-21)
+
+
+### Bug Fixes
+
+* **commitlint:** resolvendo bug de ci no commitlint ([cdb3836](https://github.com/arapucajs/eslint-config/commit/cdb38369c05d44e102b6a7dac42babfd864e23b9))
+
 ## 1.0.0 (2025-09-21)
 
 
