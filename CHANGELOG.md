@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0](https://github.com/arapucajs/eslint-config/compare/v1.1.2...v1.2.0) (2026-10-26)
+
+
+### Features
+
+* enable ArapucaJS plugin rules in presets ([76ce2f4](https://github.com/arapucajs/eslint-config/commit/76ce2f408df5173876d0ecac1cdc7448676c8ea3))
+* integrate eslint-plugin 1.3 and document presets ([fdb940d](https://github.com/arapucajs/eslint-config/commit/fdb940d9c2ccb4fb09b9795ebcab0be356fe1f9f))
+
 ## [1.1.2](https://github.com/arapucajs/eslint-config/compare/v1.1.1...v1.1.2) (2025-09-21)
 
 
