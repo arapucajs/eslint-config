@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.2](https://github.com/arapucajs/eslint-config/compare/v1.1.1...v1.1.2) (2025-09-21)
+
+
+### Bug Fixes
+
+* **url:** alterando url package para arapuca ([327bf41](https://github.com/arapucajs/eslint-config/commit/327bf411ef937bfd35c8532bd5df6610378af546))
+
 ## [1.1.1](https://github.com/arapucajs/eslint-config/compare/v1.1.0...v1.1.1) (2025-09-21)
 
 
