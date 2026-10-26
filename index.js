@@ -11,6 +11,7 @@
 import tseslint from 'typescript-eslint'
 import unicorn from 'eslint-plugin-unicorn'
 import stylistic from '@stylistic/eslint-plugin'
+import arapucajs from '@arapucajs/eslint-plugin'
 
 import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 
@@ -19,7 +20,6 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
  */
 
 export const INCLUDE_LIST = ['**/*.ts', '**/*.js']
-
 
 /**
  * List of files that must be ignored globally
@@ -48,11 +48,11 @@ export const GLOBAL_IGNORE_LIST = [
  */
 export const APP_IGNORE_LIST = ['public/assets/**', '__snapshots__/**', 'resources/**']
 
-
 /**
  * Default set of plugins to apply to the config
  */
 export const PLUGINS_LIST = {
+  '@arapucajs': arapucajs,
   '@unicorn': unicorn,
   '@stylistic': stylistic,
   ...eslintPluginPrettierRecommended.plugins,
@@ -130,6 +130,11 @@ export const RULES_LIST = {
   '@unicorn/no-for-loop': 'error',
   '@unicorn/no-instanceof-builtins': 'error',
   '@unicorn/prefer-number-properties': 'error',
+  '@arapucajs/prefer-lazy-controller-import': 'error',
+  '@arapucajs/prefer-lazy-listener-import': 'error',
+  '@arapucajs/prefer-adonisjs-inertia-link': 'warn',
+  '@arapucajs/prefer-adonisjs-inertia-form': 'warn',
+  '@arapucajs/no-backend-import-in-frontend': 'error',
   ...eslintPluginPrettierRecommended.rules,
   'prettier/prettier': ['error', { endOfLine: 'auto' }],
 }
@@ -165,7 +170,6 @@ export function configPkg(...configBlocksToMerge) {
     tseslint.configs.base,
     { name: 'Plugins list', plugins: PLUGINS_LIST },
     {
-
       name: 'Arapuca pkg defaults',
       files: INCLUDE_LIST,
 
@@ -209,7 +213,6 @@ export function configApp(...configBlocksToMerge) {
       files: INCLUDE_LIST,
       ignores: APP_IGNORE_LIST,
       rules: RULES_LIST,
-
     },
     ...configBlocksToMerge
   )
